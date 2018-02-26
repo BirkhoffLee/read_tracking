@@ -35,7 +35,7 @@ module.exports = (app) => {
         () => console.info(`[END] Set estimate successful! ${html_url}`),
         (e) => console.error(`[END] Failed to set estimate! ${html_url}`, e)
       )
-      fetch(`https://api.zenhub.io/v4/reports/release/591dc19e81a6781f839705b9/items/issues?access_token=${ZENHUB_ACCESS_TOKEN_V4}`, {
+      fetch(`https://api.zenhub.io/v4/reports/release/5a938621dd7dee163b3f8293/items/issues?access_token=${ZENHUB_ACCESS_TOKEN_V4}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `add_issues%5B0%5D%5Bissue_number%5D=${number}&add_issues%5B0%5D%5Brepo_id%5D=${REPO_ID}`,
